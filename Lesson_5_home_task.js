@@ -37,5 +37,10 @@ const letters = new Map([
     ["l", 9]
 ]);
 
-let keys = Array.from(letters.keys()).join('')
+// Option 1
+let keys = Array.from(letters.keys()).reduce((acc, curr) => acc.concat(curr), '');
 console.log("Concatenation of set keys: " + keys)
+
+// Option 2
+let keys2 = Array.from(letters.keys()).join('')
+console.log("Concatenation of set keys: " + keys2)
